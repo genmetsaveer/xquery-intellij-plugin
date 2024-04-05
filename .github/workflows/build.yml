@@ -7,7 +7,7 @@ on:
 
 env:
   XQT_PLATFORM: 'release'
-  GRADLE_VERSION: 7.6.2
+  GRADLE_VERSION: 8.5
 
 jobs:
   xqt-platform:
@@ -69,36 +69,37 @@ jobs:
       fail-fast: false
       matrix:
         idea-version: [
-            IC-2022.1,
-            IC-2022.2,
-            IC-2022.3,
-            IC-2023.1,
-            IC-2023.2,
-            IC-2023.3,
-            LATEST-EAP-SNAPSHOT
+#            IC-2022.1,
+#            IC-2022.2,
+#            IC-2022.3,
+#            IC-2023.1,
+#            IC-2023.2,
+#            IC-2023.3,
+            IC-2024.1,
+#            LATEST-EAP-SNAPSHOT
         ]
         include:
-
-          - java-version: 11
-            idea-version: IC-2022.1
-
-          - java-version: 11
-            idea-version: IC-2022.2
-
-          - java-version: 17
-            idea-version: IC-2022.3
-
-          - java-version: 17
-            idea-version: IC-2023.1
-
-          - java-version: 17
-            idea-version: IC-2023.2
-
-          - java-version: 17
-            idea-version: IC-2023.3
+#
+#          - java-version: 11
+#            idea-version: IC-2022.1
+#
+#          - java-version: 11
+#            idea-version: IC-2022.2
+#
+#          - java-version: 17
+#            idea-version: IC-2022.3
+#
+#          - java-version: 17
+#            idea-version: IC-2023.1
+#
+#          - java-version: 17
+#            idea-version: IC-2023.2
 
           - java-version: 17
-            idea-version: LATEST-EAP-SNAPSHOT
+            idea-version: IC-2024.1
+#
+#          - java-version: 17
+#            idea-version: LATEST-EAP-SNAPSHOT
 
     runs-on: ubuntu-latest
     timeout-minutes: 30
